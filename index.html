@@ -3,24 +3,23 @@
 <head>
     <title>GenOS Version 0.0.1</title>
     <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet"
+      href="/css/animate.css">
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <script src="/js/useragent.js"></script> -->
     <script
       src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
       integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
       crossorigin="anonymous"></script>
     <script src="js/brython.js"></script>
     <script src="js/brython_stdlib.js"></script>
-    <script>
-        $(function(){
-            $('.window').draggable({
-                'stack' : '.windows .window',
-                'handle' : '.window-head',
-            });
-        });
-    </script>
+    <script src="js/drag.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/closeapp.js"></script>
     <!-- <script type="text/python" src="py/fullscreen.py"></script> -->
 </head>
 <body onload="brython();">
@@ -30,12 +29,22 @@
             <div class="btn close"></div>
             <div class="btn shrink"></div>
             <div class="btn grow"></div>
-            <div class="title">Some Window</div>
+            <div class="title">
+                <img class="winico" src="https://image.flaticon.com/icons/svg/148/148922.svg" alt="">
+                Some Window
+            </div>
         </div>
         <div class="window-body">
-            <iframe src="" frameborder="0"></iframe>
+            <iframe src="https://duckduckgo.com" class="con" frameborder="0"></iframe>
         </div>
     </div>
+</div>
+<div class="current">
+    <div class="tbaricon"><img src="https://image.flaticon.com/icons/svg/283/283587.svg" alt=""></div>
+    <div class="tbaricon open"><img src="https://image.flaticon.com/icons/svg/148/148922.svg" alt=""></div>
+    <div class="tbaricon"><img src="https://image.flaticon.com/icons/svg/331/331372.svg" alt=""></div>
+    <div class="tbaricon"><img src="https://image.flaticon.com/icons/svg/297/297547.svg" alt=""></div>
+    <div class="tbaricon"><img src="https://image.flaticon.com/icons/svg/148/148922.svg" alt=""></div>
 </div>
 </body>
 </html>
