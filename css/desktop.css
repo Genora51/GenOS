@@ -1,0 +1,65 @@
+body {
+    background-color: #802047;
+    margin: 0;
+    padding:0;
+}
+
+body *{
+    font-family: "Myriad Pro", sans-serif;
+}
+
+.windows{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+}
+
+.window{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.window-head{
+    background: #000;
+    height: 30px;
+    cursor: move;
+}
+
+.window-head .title{
+    color: white;
+    font-size: 20px;
+    padding:5px;
+}
+
+.window-body{
+    width: 100%;
+    height: calc(100% - 30px);
+    background: white;
+}
+
+.btn{
+    float: right;
+    width: 15px;
+    height: 15px;
+    margin: 7.5px 5px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.btn.close{
+    background: red;
+}
+
+.btn.shrink{
+    background: gold;
+}
+
+.btn.grow{
+    background: green;
+}
