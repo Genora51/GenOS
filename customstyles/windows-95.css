@@ -1,0 +1,180 @@
+body{
+    background-color: #28696b;
+}
+
+body *{
+    font-family: "Tahoma", sans-serif;
+}
+
+.current{
+    flex-basis: 32px;
+    border-top: 2px ridge;
+    padding: 1px 0;
+    background-color: #adadad;
+}
+
+.tbaricon{
+    width: 30px;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: darkgrey;
+    border-bottom-color: darkgrey;
+    border-style: outset;
+    border-width: 2px;
+    padding:0;
+    margin-right: 5px;
+}
+
+.tbaricon img{
+    margin: 4px auto;
+    height: 20px;
+    width: auto;
+}
+
+.tbaricon.open,
+.tbaricon:active,
+.btn:active{
+    border-style: inset;
+    border-top-color: darkgrey;
+    border-left-color: darkgrey;
+    border-right-color: white;
+    border-bottom-color: white;
+}
+
+.tbaricon:hover, .tbaricon.open{
+    background: none;
+}
+
+.tbaricon.home{
+    width: 73px;
+}
+
+.tbaricon.home:after{
+    font-size: 1.2em;
+    content: "Start";
+    position: absolute;
+    /*font-weight: bold;*/
+    left: 28px;
+    top:3px;
+}
+
+.tbaricon.home img{
+    margin: 4px 4px;
+}
+
+.window{
+    opacity: 1;
+    border-width: 2px;
+    border-radius: 0;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: darkgrey;
+    border-bottom-color: darkgrey;
+    border-style: outset;
+    box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5);
+}
+
+.window-head{
+    background-color: #68636a;
+}
+
+.selectedWin .window-head{
+    background-color: #001482;
+}
+
+.window-head .title{
+    font-size: 1.1em;
+    margin-top: -3px;
+}
+
+.window-head .title img{
+    position: relative;
+    top: 3px;
+}
+
+.window-body{
+    border: 2px inset;
+    width: calc(100% - 4px);
+    height: calc(100% - 34px);
+}
+
+.btn{
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: darkgrey;
+    border-bottom-color: darkgrey;
+    border-style: outset;
+    border-width: 2px;
+    background-color: #adadad;
+    border-radius: 0;
+    height: 20px;
+    margin: 3px 3px 3px 0;
+    width: 20px;
+    position: relative;
+}
+
+.btn:after{
+    font-family: FontAwesome;
+    position: absolute;
+    top:2px;
+    left: 2px;
+}
+
+.shrink:after{
+    content: '\f2d1';
+}
+
+.grow:after{
+    content: '\f2d0';
+}
+
+.close:after{
+    left: 2px;
+    top: -7px;
+    font-family: "Tahoma", sans-serif;
+    font-weight: 800;
+    content: '\2a09';
+    font-size: 1.5em;
+}
+
+.shortcut{
+    text-align: center;
+}
+
+.desktop .shortcut:hover,
+.desktop .shortcut.ui-draggable-dragging{
+    border-color: rgba(0,0,0,0);
+}
+
+.desktop .shortcut:hover img,
+.desktop .shortcut.ui-draggable-dragging img{
+    filter: sepia(1) hue-rotate(165deg)
+            saturate(5) brightness(0.8)
+            contrast(1.3);
+}
+
+.desktop .shortcut:hover .shortname,
+.desktop .shortcut.ui-draggable-dragging .shortname{
+    display: inline;
+    background-color: #001482;
+}
+
+
+.status{
+    border-width: 2px;
+    border-style: inset;
+    border-top-color: darkgrey;
+    border-left-color: darkgrey;
+    border-right-color: white;
+    border-bottom-color: white;
+    content: '%I:%M %p';
+    color: black;
+    bottom: 3px;
+    padding: 0 5px;
+    height: 25px;
+}
+
+.batstate{
+    border: none;
+    margin-top: 2px;
+}

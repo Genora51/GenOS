@@ -1,0 +1,212 @@
+:root{
+    --bgim: url(http://wallpapercave.com/wp/kZLsbwo.jpg);
+}
+
+body{
+    background-image: var(--bgim);
+    background-position: center;
+}
+
+body *{
+    font-family: "San Francisco", "Helvetica Neue", 
+                 "Lucida Grande", "Arial", sans-serif;
+}
+
+
+.window{
+    opacity: 1;
+    border-radius: 5px;
+}
+
+.window-head .btn{
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.window-head .title{
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    text-align: center;
+    width: calc(100% - 160px);
+    overflow-x: visible;
+    overflow-y: hidden;
+    height: 20px;
+    margin: -5px 75px;
+    min-width: 20px;
+}
+
+.title img{
+    position: relative;
+    top: 5px;
+}
+
+.window-head{
+    background-color: #f3f3f3;
+}
+
+.window.selectedWin .window-head{
+    background-color: #d3d6d6;
+}
+
+.grow{
+    background-color: #53c433;
+    border-color: #46a120;
+}
+
+.shrink{
+    background-color: #f6b027;
+    border-color: #d68f26;
+}
+
+.close{
+    background-color: #e74545;
+    border-color: #d52e29;
+}
+
+.btn{
+    width: 10px;
+    height: 10px;
+    margin: 9px 4px;
+}
+
+.close{
+    margin-left: 8px;
+}
+
+.window:not(.selectedWin) .btn{
+    background-color: #d4d4d4;
+    border-color: #c7c7c7;
+}
+
+.current{
+    overflow: hidden;
+    background: none;
+    width: initial;
+    align-self: center;
+    display: inline-flex;
+    flex-basis: 80px;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+
+.current:before{
+    content: "";
+    position: absolute;
+    /*z-index: -1;*/
+    background: var(--bgim) center center fixed;
+    filter: blur(25px) brightness(150%) contrast(80%);
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
+    margin-left: -25px;
+    margin-top: -25px;
+}
+
+.tbaricon{
+    width: 75px;
+    height: 75px;
+}
+
+.tbaricon:hover, .tbaricon.open{
+    background: none;
+}
+
+.tbaricon.open:after{
+    content: "";
+    background-color: black;
+    width: 4px;
+    height: 4px;
+    opacity: 0.8;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 8px;
+    left:0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.tbaricon:active{
+    filter: brightness(0.6);
+}
+
+.desktop{
+    height: calc(100vh - 110px);
+    margin-top: 20px;
+}
+
+.tbaricon img{
+    width: auto;
+    height: 55px;
+    margin-top: 7px;
+}
+
+.shortcut{
+    text-align: center;
+}
+
+.desktop .shortcut:hover{
+    border: 2px solid rgba(0,0,0,0);
+}
+
+.shortcut img{
+    padding: 5px;
+    border: 2px solid rgba(0,0,0,0);
+    margin: -3px;
+}
+
+.shortcut>.shortname{
+    margin-left: -1px;
+    padding: 2px;
+    width: 100%;
+}
+
+.shortcut:hover img,
+.shortcut.ui-draggable-dragging img{
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.5);
+}
+
+.shortcut:hover .shortname,
+.shortcut.ui-draggable-dragging .shortname{
+    border-radius: 2px;
+    background-color: #0850d0;
+}
+
+.status{
+    content: '%a %H:%M';
+    width: calc(100vw - 10px);
+    position: relative;
+    bottom: auto;
+    right: auto;
+    color: #111219;
+    flex: 0 0 20px;
+    order: 1;
+    text-align: right;
+    /*background-color: rgba(220,220,220,0.85);*/
+    background-color: #bbc9d9;
+    padding-right: 10px;
+    box-shadow: 0px 1px 0px 0px black;
+}
+
+.batstate{
+    border: none;
+    position: relative;
+    top: 1px;
+}
+
+#date{
+    position: relative;
+    top: -2px;
+}
+
+.batstate i{
+    position: relative;
+    top: 1px;
+}
+
+.batstate>*{
+    float: right;
+    margin: 0 2px;
+}

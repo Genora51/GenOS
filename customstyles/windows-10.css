@@ -1,0 +1,140 @@
+:root{
+    --bgim: 
+    url(
+        http://cdn2.alphr.com/sites/alphr/files/2015/07/windows_10_light_and_mirror_background_0.jpg
+    );
+
+}
+
+body{
+    background-image: var(--bgim);
+    background-size: cover;
+    background-position: center;
+}
+
+body *{
+    font-family: 'Segoe UI', 'Helvetica Neue',
+                 'Arial', sans-serif;
+}
+
+.current{
+    background-color: #000912;
+}
+
+.tbaricon{
+    width: 45px;
+}
+
+.tbaricon img{
+    height: 30px;
+    width: auto;
+    padding-top: 5px;
+}
+
+
+.tbaricon.open{
+    background-color: rgba(255,255,255,0.2);
+    -webkit-box-shadow: inset 0px -2px 0px 0px rgba(122,193,255,1);
+    -moz-box-shadow: inset 0px -2px 0px 0px rgba(122,193,255,1);
+    box-shadow: inset 0px -2px 0px 0px rgba(122,193,255,1);
+}
+
+.tbaricon:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+
+.tbaricon.open:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+
+.desktop .shortcut:hover,
+.desktop .shortcut.ui-draggable-dragging{
+    box-shadow: 0px 0px 1px 0px rgb(40,40,80), 
+                0px 0px 1px 1px white,
+                0px 0px 1px 2px rgb(40,40,80);
+    border: 2px solid rgba(0,0,0,0);
+    background-color: rgba(255,255,255,0.2);
+}
+
+.window{
+    opacity: 1;
+    border-radius: 0;
+    -webkit-box-shadow: 0px 0px 0px 1px #388cce, 0px 0px 18px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 1px #388cce, 0px 0px 18px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 1px #388cce, 0px 0px 18px -2px rgba(0,0,0,0.75);
+}
+
+.window-head .title{
+    color: inherit;
+    font-size: 18px;
+    margin-top: -3px;
+}
+
+.window-head .title img{
+    filter: none;
+    position: relative;
+    top: 3px;
+}
+
+.selectedWin .window-head{
+    color: black;
+}
+
+.window-head{
+    color: #bbb;
+    font-weight: 350;
+    background-color: #fff;
+}
+
+.btn{
+    background: none;
+    position: relative;
+    border-radius: 0;
+    margin: 0;
+    height: 100%;
+    width: 48px;
+    transition: background-color 0.2s, color 0.2s;
+    margin-left: 1px;
+}
+
+.btn:hover{
+    background-color: #d7dada;
+}
+
+.close:hover{
+    background-color: #d70c05;
+    color: white;
+}
+
+.btn:after{
+    position: absolute;
+    font-size: 25px;
+    line-height: 90%;
+    top: 0;
+    left: 16px;
+    bottom: 0;
+    right: 0;
+    font-weight: 300;
+}
+
+.close:after{
+    content: '\00D7';
+}
+
+.shrink:after{
+    content: '\2212';
+}
+
+.grow:after{
+    content: '\25A1';
+}
+
+.status{
+    content: '%I:%M %p<br/>%d/%m/%Y';
+}
+
+#date{
+    text-align: center;
+    position: relative;
+    top: 8px;
+}

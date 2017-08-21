@@ -27,7 +27,13 @@ function drg(elem){
     }); 
 }
 
-$(".windows").on("DOMNodeInserted", ".window", function() { drg(this); });
+// $(".windows").on("DOMNodeInserted", ".window", function() { drg(this); });
 $(function(){
     drg('.window');
+    $('.desktop .shortcut').draggable({
+        'stack' : '.desktop .shortcut',
+        'containment' : '.desktop',
+        'opacity' : 0.7,
+        'grid' : [$('.shortcut').outerWidth(true), $('.shortcut').outerHeight(true)]
+    });
 });

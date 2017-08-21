@@ -1,0 +1,3 @@
+iconpack : realist
+iconstyle : True
+customstyle : windows-10

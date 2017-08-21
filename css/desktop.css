@@ -11,14 +11,50 @@ body *{
     font-family: "Myriad Pro", sans-serif;
 }
 
+.desktop{
+    position: absolute;
+    z-index: 1;
+    padding: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 60px);
+}
+
+.desktop .shortcut{
+    border: 2px solid rgba(0,0,0,0);
+    width: 70px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.desktop .shortcut:hover{
+    border: 2px solid #ddd;
+}
+
+.desktop .shortcut.ui-draggable-dragging{
+    cursor: move;
+    border: 2px solid rgba(0,0,0,0);
+}
+
+.shorticon{
+    margin: 0 5px;
+    width: 60px;
+}
+.shortname{
+    color: white;
+    text-align: center;
+}
+
 .windows{
     width: 100vw;
     flex: 1 1 auto;
     order:5;
     position: relative;
+    z-index: 10;
+    pointer-events: none;
 }
 
 .window{
+    pointer-events: auto;
     width: 500px;
     height: 300px;
     position: absolute;
@@ -71,33 +107,41 @@ body *{
     border-radius: 100%;
 }
 
-.btn.close{
-    background: red;
+.close{
+    background-color: red;
 }
 
-.btn.shrink{
-    background: gold;
+.shrink{
+    background-color: gold;
 }
 
-.btn.grow{
-    background: green;
+.grow{
+    background-color: green;
 }
 
 .current{
     width: 100vw;
     background: #000;
-    flex: 0 0 70px;
+    flex: 0 0 50px;
     order: 10;
     position: relative;
     display: flex;
 }
 
 .tbaricon{
-    height: 50px;
-    width: 50px;
+    /*height: calc(100% - 10px);*/
+    width: 40px;
     cursor: pointer;
-    padding: 10px;
+    position: relative;
+    padding: 5px;
     transition: background-color 0.2s;
+}
+
+.tbaricon img{
+    width: 40px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .tbaricon.open{
@@ -106,4 +150,23 @@ body *{
 
 .tbaricon:hover{
     background: #555;
+}
+
+.status{
+    color: white;
+    right: 5px;
+    position: absolute;
+    bottom: 15px;
+    content: '%a %Y/%m/%d %H:%M:%S';
+}
+
+.batstate{
+    display: inline-block;
+    padding-right: 5px;
+    border-right: 2px solid white;
+    margin-right: 2px;
+}
+
+#date{
+    display: inline-block;
 }

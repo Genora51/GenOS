@@ -1,23 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Web Browser</title>
+{% extends "baseapp/index.html" %}
+
+{% block head %}
 	<link rel="stylesheet" href="style.css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<script
-	  src="https://code.jquery.com/jquery-3.2.1.min.js"
-	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  crossorigin="anonymous"></script>
-	<script src="/js/brython.js"></script>
-    <script src="/js/brython_stdlib.js"></script>
-    <script type="text/python" src="app.py"></script>
-</head>
-<body onload="brython()">
-	<div class="back"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
-	<div class="reload"><i class="fa fa-refresh" aria-hidden="true"></i></div>
-	<input class="searchbar" type="text" placeholder="URL" value="https://duckduckgo.com">
+{% endblock head %}
+
+{% block body %}
+<div class="body">
+	<div class="home"><i class="fa fa-home" aria-hidden="true"></i></div>
+	<div class="settings"><i class="fa fa-cog" aria-hidden="true"></i></div>
+	<input class="searchbar" type="text" placeholder="URL" value="{{ options['home'] }}">
 	<div class="page">
-		<iframe id="ifr" onload="urlChanged()" src="https://duckduckgo.com" frameborder="0"></iframe>
+		<iframe id="ifr" src="{{ options['home'] }}" frameborder="0"></iframe>
 	</div>
-</body>
-</html>
+</div>
+{% endblock body %}

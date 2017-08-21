@@ -1,52 +1,59 @@
+.body{
+    display: grid;
+    grid-template-areas:
+    "home settings urlbar"
+    "pages pages pages";
+    grid-template-columns: 40px 40px 1fr;
+    grid-template-rows: 40px 1fr;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #eee;
+    overflow: hidden;
+}
 body{
-	display: grid;
-	grid-template-areas:
-	"back reload urlbar"
-	"pages pages pages";
-	grid-template-columns: 40px 40px 1fr;
-	grid-template-rows: 40px 1fr;
-	padding: 0;
-	margin: 0;
-	height: 100vh;
-	background-color: #eee;
-	overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
-.back, .reload{
-	font-size: 35px;
-	color: #444;
-	text-align: center;
-	cursor: pointer;
+.home, .settings{
+    font-size: 35px;
+    color: #444;
+    text-align: center;
+    cursor: pointer;
 }
 
-.back:hover, .reload:hover{
-	background-color: #ccc;
+.home:hover, .settings:hover{
+    background-color: #ccc;
 }
 
 .searchbar{
-	color: #444;
-	font-family: "Lato", sans-serif;
-	margin: 5px;
-	font-size: 20px;
+    color: #444;
+    font-family: "Lato", sans-serif;
+    margin: 5px;
+    font-size: 20px;
 }
 
-.back{
-	grid-area: back;
+.home{
+    grid-area: home;
 }
 
-.reload{
-	grid-area: reload;
+.settings{
+    grid-area: settings;
 }
 
 .searchbar{
-	grid-area: urlbar;
+    grid-area: urlbar;
 }
 
 .page{
-	grid-area: pages;
+    grid-area: pages;
 }
 
 .page iframe{
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }

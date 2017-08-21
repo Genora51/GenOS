@@ -1,6 +1,16 @@
-from browser import document
+from browser import document, window
 
-hist = []
+class Application:
 
-def urlChanged():
-	hist.append(document['ifr']
+    def goHome():
+        iframe = document['ifr']
+        iframe.src = iframe.src
+
+    def checkChange(self, event):
+        if event.keyCode == 13:
+            iframe = document['ifr']
+            iframe.src = self.j('.searchbar').val()
+
+    def start(self):
+        self.j('.home').click(self.goHome)
+        self.j('.searchbar').on('keydown', lambda e: self.checkChange(e))
