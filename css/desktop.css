@@ -170,3 +170,39 @@ body *{
 #date{
     display: inline-block;
 }
+
+.startWin{
+    display: none;
+    border-radius: 0 5px 0 0;
+}
+
+.startWin.active{
+    overflow: scroll;
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    background-color: #fff;
+    width: 300px;
+    height: 300px;
+    z-index: 300;
+}
+
+.startWin .startApp{
+    position: relative;
+    bottom: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.startWin .startApp img{
+    position: relative;
+    top: 15px;
+    width: 40px;
+}
+
+.startWin .window-head{
+    background: #000;
+    height: 30px;
+    overflow-y: hidden;
+}

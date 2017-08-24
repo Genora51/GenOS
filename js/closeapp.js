@@ -1,5 +1,5 @@
 function capp(){
-	$('.btn.close').click(function(){
+	$('.window .btn.close').click(function(){
 		let app = $(this).parents('.window');
 		// CLOSE APP FUNCTIONS
         app.find('.con')[0].contentWindow.postMessage({

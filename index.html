@@ -30,22 +30,23 @@
     <script src="js/drag.js"></script>
     <script src="js/select.js"></script>
     <script src="js/closeapp.js"></script>
+    <script type="text/python" src="py/start.py"></script>
     <script type="text/python" src="/py/battery.py"></script>
     <!-- <script type="text/python" src="py/fullscreen.py"></script> -->
 </head>
 <body onload="brython();">
 <div class="desktop">
-    <div class="shortcut">
+    <div class="shortcut" genos_open_app="browser">
         <img src="/iconpacks/{{options['iconpack']}}/browser.png" alt="" class="shorticon">
         <div class="shortname">Web Browser</div>
     </div>
-    <div class="shortcut">
+    <div class="shortcut" genos_open_app="browser">
         <img src="/iconpacks/{{options['iconpack']}}/browser.png" alt="" class="shorticon">
         <div class="shortname">Web Browser</div>
     </div>
 </div>
 <div class="windows">
-    <div class="window">
+    <div class="window" genos_app="browser">
         <div class="window-head">
             <div class="btn close"></div>
             <div class="btn shrink"></div>
@@ -61,18 +62,52 @@
     </div>
 </div>
 <div class="current">
-    <div class="tbaricon home"><img src="/iconpacks/{{options['iconpack']}}/home.png" alt=""></div>
-    <div class="tbaricon open"><img src="/iconpacks/{{options['iconpack']}}/browser.png" alt=""></div>
-    <div class="tbaricon"><img src="/iconpacks/{{options['iconpack']}}/code.png" alt=""></div>
-    <div class="tbaricon"><img src="/iconpacks/{{options['iconpack']}}/editor.png" alt=""></div>
-    <div class="tbaricon"><img src="/iconpacks/{{options['iconpack']}}/console.png" alt=""></div>
+    <div class="tbaricon home">
+        <img src="/iconpacks/{{options['iconpack']}}/home.png" alt="">
+    </div>
+    <div class="tbaricon open" genos_open_app="browser">
+        <img src="/iconpacks/{{options['iconpack']}}/browser.png" alt="">
+    </div>
+    <div class="tbaricon" genos_open_app="code">
+        <img src="/iconpacks/{{options['iconpack']}}/code.png" alt="">
+    </div>
+    <div class="tbaricon" genos_open_app="editor">
+        <img src="/iconpacks/{{options['iconpack']}}/editor.png" alt="">
+    </div>
+    <div class="tbaricon" genos_open_app="console">
+        <img src="/iconpacks/{{options['iconpack']}}/console.png" alt="">
+    </div>
 </div>
 <div class="status">
-        <div class="batstate">
-            <i class="fa fa-battery-half"></i>
-            <span id="battery">??%</span>
+    <div class="batstate">
+        <i class="fa fa-battery-half"></i>
+        <span id="battery">??%</span>
+    </div>
+    <div id="date"></div>
+</div>
+<div class="startWin" toggleStart="true">
+    <div class="window-head">
+            <div class="btn close" toggleStart="true"></div>
+            <div class="title">
+                Start
+            </div>
         </div>
-        <div id="date"></div>
+    <div class="startApp" genos_open_app="browser">
+        <img src="/iconpacks/{{options['iconpack']}}/browser.png" alt="">
+        Web Browser
+    </div>
+    <div class="startApp" genos_open_app="editor">
+        <img src="/iconpacks/{{options['iconpack']}}/editor.png" alt="">
+        Editor
+    </div>
+    <div class="startApp" genos_open_app="console">
+        <img src="/iconpacks/{{options['iconpack']}}/console.png" alt="">
+        Console
+    </div>
+    <div class="startApp" genos_open_app="code">
+        <img src="/iconpacks/{{options['iconpack']}}/code.png" alt="">
+        Code
+    </div>
 </div>
 </body>
 </html>

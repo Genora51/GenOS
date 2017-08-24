@@ -21,7 +21,7 @@ body{
                 0px 0px 1px 1px white,
                 0px 0px 25px 4px rgba(0,0,0,0.5);
     opacity: 1;
-    overflow-x: visible;
+    overflow-x: hidden;
     filter: contrast(80%) brightness(120%);
     min-width: 150px;
 }

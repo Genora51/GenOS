@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from http.server import SimpleHTTPRequestHandler,HTTPServer
 import re
 from os.path import join
